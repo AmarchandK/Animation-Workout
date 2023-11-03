@@ -13,14 +13,20 @@ class _ListAnimationState extends State<ListAnimation>
   List<Animation<Offset>> listAnimations = [];
   @override
   void initState() {
-    animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 2));
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    );
     listAnimations = List.generate(
-        5,
-        (index) => Tween(begin: const Offset(-1, 0), end: const Offset(0, 0))
-            .animate(CurvedAnimation(
-                parent: animationController,
-                curve: Interval(index * (1 / 5), 1))));
+      5,
+      (index) =>
+          Tween(begin: const Offset(-1, 0), end: const Offset(0, 0)).animate(
+        CurvedAnimation(
+          parent: animationController,
+          curve: Interval(index * (1 / 5), 1),
+        ),
+      ),
+    );
     animationController.forward();
     super.initState();
   }
