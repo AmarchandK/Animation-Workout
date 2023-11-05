@@ -1,6 +1,4 @@
-import 'package:animation_starter_code/explicit_examples/list_animation.dart';
-import 'package:animation_starter_code/explicit_examples/loading_animation.dart';
-import 'package:animation_starter_code/page_route_builder_animation/splash_animation.dart';
+import 'package:animation_starter_code/custom_painter_example/bouncing_ball_animation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,10 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SplashAnimation(),
+      home: const BouncingBallAnimation(),
     );
   }
 }
